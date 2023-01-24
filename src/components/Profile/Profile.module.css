@@ -1,0 +1,41 @@
+.profile {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid gray;
+  border-radius: 8px;
+  max-width: 320px;
+
+  text-align: center;
+}
+.description {
+  padding: 10px;
+}
+
+.avatar {
+  display: block;
+  margin: 48px auto 10px auto;
+
+  max-width: 50%;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tag {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: rgb(117, 115, 115);
+}
+
+.location {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: rgb(117, 115, 115);
+}
