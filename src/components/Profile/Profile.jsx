@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
-import { Stats } from 'components/Stats/Stats';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -11,11 +16,21 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
-      <Stats
-        followers={stats.followers}
-        views={stats.views}
-        likes={stats.likes}
-      />
+
+      <ul className={css.stats}>
+        <li>
+          <span className={css.label}>Followers</span>
+          <span className={css.quantity}>{followers}</span>
+        </li>
+        <li>
+          <span className={css.label}>Views</span>
+          <span className={css.quantity}>{views}</span>
+        </li>
+        <li>
+          <span className={css.label}>Likes</span>
+          <span className={css.quantity}>{likes}</span>
+        </li>
+      </ul>
     </div>
   );
 };
@@ -26,6 +41,9 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
   // stats1:PropTypes.arrayOf
   // stats1: PropTypes.shape
   // stats1: PropTypes.exact

@@ -19,5 +19,18 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-  outline: 1px solid red;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.percentage {
+  font-size: 22px;
 }
