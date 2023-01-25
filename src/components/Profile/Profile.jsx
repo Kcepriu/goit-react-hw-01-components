@@ -40,10 +40,12 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.exact({
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+  }).isRequired,
+
   // stats1:PropTypes.arrayOf
   // stats1: PropTypes.shape
   // stats1: PropTypes.exact
