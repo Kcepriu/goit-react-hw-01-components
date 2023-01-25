@@ -18,7 +18,7 @@ td::first-letter {
 
 .transactionHistory thead {
   background-color: rgb(49, 62, 245);
-  color: white;
+  color: #ffffff;
   font-size: 18px;
 }
 
@@ -28,7 +28,7 @@ td::first-letter {
 }
 
 .highLightRow {
-  background-color: mediumaquamarine;
+  background-color: #66cdaa;
 }
 
 .transactionHistory th,
